@@ -1,0 +1,22 @@
+<div class="py-16 bg-[#F7F8FD]">
+  <h2 class="text-2xl md:text-4xl text-center py-4">
+    Most <b class="text-red-600">popular</b> destinations
+  </h2>
+  <div class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 px-8 lg:px-16 min-[380px]:w-[80%] lg:w-full mx-auto">
+    <!-- Destination Card -->
+    <div
+      *ngFor="let destination of destinations"
+      class="flex flex-col items-center bg-white shadow-lg p-3 pb-4 rounded-lg"
+    >
+      <img [src]="destination.image" [alt]="destination.name" class="w-[250px] h-[214px] rounded-lg mb-4 object-contain" loading="lazy" />
+      <h3 class="text-lg text-start">{{ destination.name }}</h3>
+
+      <button
+        class="mt-4 bg-red-600 text-white px-4 py-2 rounded-xl flex items-center gap-1 transition hover:bg-red-700"
+      >
+        Explore More
+        <span>&#x2197;</span>
+      </button>
+    </div>
+  </div>
+</div>
